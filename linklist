@@ -1,0 +1,13 @@
+bool insert_tail(node *phead, Elemtype value)
+{
+  node *newnode = (node *)malloc(sizeof(Elemtype));
+  newnode->data = value;
+  
+  while(phead->next != NULL)
+  {
+    newnode->next = phead->next;
+    phead->next = newnode;
+    return true;
+  }
+
+}
